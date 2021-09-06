@@ -3,7 +3,7 @@ import AddIcon from '@material-ui/icons/Add';
 import { TextField } from "@material-ui/core"
 import React from 'react';
 import { styled } from '@material-ui/core/styles'
-
+import { RECIPE_DB_URL } from '../settings'
 
 const SpacedFormComponent = styled('form')(({
     theme
@@ -21,8 +21,20 @@ class RecipeNameComponent extends React.Component {
     }
 
     postRecipeOnClick(e) {
-        console.log("CLICKED", this.state.recipeName)
         e.preventDefault()
+
+        console.log("CLICKED", this.state.recipeName)
+        fetch(RECIPE_DB_URL + "/recipes", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ "name": this.state.recipeName })
+        })
+            .then(response => response.json())
+            .then(data => console.log(data));
+
     }
 
     render() {
