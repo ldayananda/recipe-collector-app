@@ -126,7 +126,7 @@ class RecipeCollection extends React.Component {
                         }
                     </Typography>
                 </Container>
-            </React.Fragment>
+            </React.Fragment >
         )
     }
 }
