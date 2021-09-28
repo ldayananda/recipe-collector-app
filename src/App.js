@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-// import RecipeCollection from './pages/recipeCollection'
+import RecipeCollection from './pages/recipeCollection'
 
 function App() {
   return (
