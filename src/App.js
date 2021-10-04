@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-// import RecipeCollection from './pages/recipeCollection'
+import RecipeCollection from './pages/recipeCollection'
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <RecipeCollection />
       </header>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     </div>
